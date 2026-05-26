@@ -1,0 +1,24 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Sat May 16 08:48:29 2026
+[*]
+[dumpfile] "/home/vlsi_dev_box/Documents/NIELIT_ASSIGNMENTS/EXP_NO_2/halfadder/half_BM.vcd"
+[dumpfile_mtime] "Sat May 16 08:46:20 2026"
+[dumpfile_size] 579
+[savefile] "/home/vlsi_dev_box/Documents/NIELIT_ASSIGNMENTS/EXP_NO_2/halfadder/halfadder_BM.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-6.978432 89 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 233
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 144
+@28
+halfadder_tb.a
+halfadder_tb.b
+halfadder_tb.carry
+@29
+halfadder_tb.sum
+[pattern_trace] 1
+[pattern_trace] 0
