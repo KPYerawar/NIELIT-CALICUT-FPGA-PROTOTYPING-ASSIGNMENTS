@@ -1,0 +1,45 @@
+$date
+	Tue May 26 10:30:19 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module df_tb_dec $end
+$var wire 4 ! y [3:0] $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ e $end
+$scope module d1 $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ e $end
+$var wire 4 % y [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10 %
+1$
+1#
+0"
+b10 !
+$end
+#20
+b1000 !
+b1000 %
+1"
+#40
+b100 !
+b100 %
+0#
+#100
+b0 !
+b0 %
+0$
+1#
+0"
+#120

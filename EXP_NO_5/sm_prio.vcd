@@ -1,0 +1,125 @@
+$date
+	Tue May 26 10:01:37 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module sm_tb__prio $end
+$var wire 1 ! v $end
+$var wire 2 " a [1:0] $end
+$var reg 4 # y [3:0] $end
+$scope module p1 $end
+$var wire 1 $ and_out $end
+$var wire 1 % not_y2 $end
+$var wire 1 ! v $end
+$var wire 4 & y [3:0] $end
+$var wire 2 ' a [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 '
+b100 &
+0%
+0$
+b100 #
+b1 "
+1!
+$end
+#20
+1%
+b0 "
+b0 '
+b1 #
+b1 &
+#40
+b11 "
+b11 '
+b1001 #
+b1001 &
+#60
+1$
+b10 "
+b10 '
+b11 #
+b11 &
+#80
+0%
+0$
+b11 "
+b11 '
+b1101 #
+b1101 &
+#120
+b1 "
+b1 '
+b101 #
+b101 &
+#140
+1$
+1%
+b10 "
+b10 '
+b10 #
+b10 &
+#160
+b0 "
+b0 '
+0$
+b1 #
+b1 &
+#180
+0%
+b11 "
+b11 '
+b1101 #
+b1101 &
+#200
+b1 "
+b1 '
+b110 #
+b110 &
+#220
+b11 "
+b11 '
+b1101 #
+b1101 &
+#260
+b1100 #
+b1100 &
+#280
+1%
+b1001 #
+b1001 &
+#300
+0%
+0$
+b1 "
+b1 '
+b110 #
+b110 &
+#320
+b101 #
+b101 &
+#340
+1$
+1%
+b11 "
+b11 '
+b1010 #
+b1010 &
+#360
+b1 "
+b1 '
+0%
+0$
+b101 #
+b101 &
+#380
+b111 #
+b111 &
+#400

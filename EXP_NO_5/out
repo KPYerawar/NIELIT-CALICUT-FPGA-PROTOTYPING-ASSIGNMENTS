@@ -1,0 +1,80 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x616559038d90 .scope module, "sm_tb__prio" "sm_tb__prio" 2 1;
+ .timescale 0 0;
+v0x616559088ab0_0 .net "a", 1 0, L_0x616559089260;  1 drivers
+v0x616559088b70_0 .net "v", 0 0, L_0x616559089690;  1 drivers
+v0x616559088c40_0 .var "y", 3 0;
+S_0x616559038f20 .scope module, "p1" "sm_prio" 2 7, 3 1 0, S_0x616559038d90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "y";
+    .port_info 1 /OUTPUT 2 "a";
+    .port_info 2 /OUTPUT 1 "v";
+L_0x616559088d40 .functor NOT 1, L_0x616559088e10, C4<0>, C4<0>, C4<0>;
+L_0x616559088f00 .functor AND 1, L_0x616559088d40, L_0x616559088fc0, C4<1>, C4<1>;
+L_0x6165590890b0 .functor OR 1, L_0x616559089170, L_0x616559088f00, C4<0>, C4<0>;
+L_0x616559089380 .functor OR 1, L_0x616559089470, L_0x616559089560, C4<0>, C4<0>;
+L_0x616559089690 .functor OR 1, L_0x616559089750, L_0x616559089840, L_0x616559089980, L_0x616559089a70;
+v0x616559073000_0 .net *"_ivl_1", 0 0, L_0x616559088e10;  1 drivers
+v0x616559087d40_0 .net *"_ivl_12", 0 0, L_0x616559089470;  1 drivers
+v0x616559087e20_0 .net *"_ivl_14", 0 0, L_0x616559089560;  1 drivers
+v0x616559087ee0_0 .net *"_ivl_16", 0 0, L_0x616559089750;  1 drivers
+v0x616559087fc0_0 .net *"_ivl_18", 0 0, L_0x616559089840;  1 drivers
+v0x6165590880f0_0 .net *"_ivl_20", 0 0, L_0x616559089980;  1 drivers
+v0x6165590881d0_0 .net *"_ivl_22", 0 0, L_0x616559089a70;  1 drivers
+v0x6165590882b0_0 .net *"_ivl_3", 0 0, L_0x616559088fc0;  1 drivers
+v0x616559088390_0 .net *"_ivl_4", 0 0, L_0x6165590890b0;  1 drivers
+v0x616559088470_0 .net *"_ivl_7", 0 0, L_0x616559089170;  1 drivers
+v0x616559088550_0 .net *"_ivl_8", 0 0, L_0x616559089380;  1 drivers
+v0x616559088630_0 .net "a", 1 0, L_0x616559089260;  alias, 1 drivers
+v0x616559088710_0 .net "and_out", 0 0, L_0x616559088f00;  1 drivers
+v0x6165590887d0_0 .net "not_y2", 0 0, L_0x616559088d40;  1 drivers
+v0x616559088890_0 .net "v", 0 0, L_0x616559089690;  alias, 1 drivers
+v0x616559088950_0 .net "y", 3 0, v0x616559088c40_0;  1 drivers
+L_0x616559088e10 .part v0x616559088c40_0, 2, 1;
+L_0x616559088fc0 .part v0x616559088c40_0, 1, 1;
+L_0x616559089170 .part v0x616559088c40_0, 3, 1;
+L_0x616559089260 .concat8 [ 1 1 0 0], L_0x616559089380, L_0x6165590890b0;
+L_0x616559089470 .part v0x616559088c40_0, 3, 1;
+L_0x616559089560 .part v0x616559088c40_0, 2, 1;
+L_0x616559089750 .part v0x616559088c40_0, 3, 1;
+L_0x616559089840 .part v0x616559088c40_0, 2, 1;
+L_0x616559089980 .part v0x616559088c40_0, 1, 1;
+L_0x616559089a70 .part v0x616559088c40_0, 0, 1;
+    .scope S_0x616559038d90;
+T_0 ;
+    %vpi_call 2 12 "$dumpfile", "sm_prio.vcd" {0 0 0};
+    %vpi_call 2 13 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x616559038d90 {0 0 0};
+    %pushi/vec4 20, 0, 32;
+T_0.0 %dup/vec4;
+    %pushi/vec4 0, 0, 32;
+    %cmp/s;
+    %jmp/1xz T_0.1, 5;
+    %jmp/1 T_0.1, 4;
+    %pushi/vec4 1, 0, 32;
+    %sub;
+    %vpi_func 2 16 "$random" 32 {0 0 0};
+    %pushi/vec4 16, 0, 32;
+    %mod/s;
+    %pad/s 4;
+    %store/vec4 v0x616559088c40_0, 0, 4;
+    %delay 20, 0;
+    %vpi_call 2 18 "$display", "y = %b , a = %b , v = %b ", v0x616559088c40_0, v0x616559088ab0_0, v0x616559088b70_0 {0 0 0};
+    %jmp T_0.0;
+T_0.1 ;
+    %pop/vec4 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "sm_tb__prio.v";
+    "sm_prio.v";
