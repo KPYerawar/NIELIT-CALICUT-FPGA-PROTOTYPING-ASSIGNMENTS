@@ -1,0 +1,41 @@
+$date
+	Wed Jun  3 19:17:24 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_parity_generator $end
+$var wire 1 ! odd_parity $end
+$var wire 1 " even_parity $end
+$var reg 8 # data [7:0] $end
+$scope module dut $end
+$var wire 8 $ data [7:0] $end
+$var wire 1 ! odd_parity $end
+$var wire 1 " even_parity $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 $
+b0 #
+0"
+1!
+$end
+#10
+0!
+1"
+b1 #
+b1 $
+#20
+1!
+0"
+b10101010 #
+b10101010 $
+#30
+b11111111 #
+b11111111 $
+#40

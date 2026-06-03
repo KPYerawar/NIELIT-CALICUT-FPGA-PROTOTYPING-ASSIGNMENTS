@@ -1,0 +1,56 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x6322b1a0ff30 .scope module, "tb_parity_generator" "tb_parity_generator" 2 1;
+ .timescale 0 0;
+v0x6322b1a225b0_0 .var "data", 7 0;
+v0x6322b1a22670_0 .net "even_parity", 0 0, L_0x6322b1a22840;  1 drivers
+v0x6322b1a22740_0 .net "odd_parity", 0 0, L_0x6322b1a22a20;  1 drivers
+S_0x6322b1a100c0 .scope module, "dut" "parity_generator" 2 8, 3 1 0, S_0x6322b1a0ff30;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "data";
+    .port_info 1 /OUTPUT 1 "even_parity";
+    .port_info 2 /OUTPUT 1 "odd_parity";
+L_0x6322b1a22a20 .functor NOT 1, L_0x6322b1a22980, C4<0>, C4<0>, C4<0>;
+v0x6322b19d6cf0_0 .net *"_ivl_3", 0 0, L_0x6322b1a22980;  1 drivers
+v0x6322b1a222f0_0 .net "data", 7 0, v0x6322b1a225b0_0;  1 drivers
+v0x6322b1a223d0_0 .net "even_parity", 0 0, L_0x6322b1a22840;  alias, 1 drivers
+v0x6322b1a22470_0 .net "odd_parity", 0 0, L_0x6322b1a22a20;  alias, 1 drivers
+L_0x6322b1a22840 .reduce/xor v0x6322b1a225b0_0;
+L_0x6322b1a22980 .reduce/xor v0x6322b1a225b0_0;
+    .scope S_0x6322b1a0ff30;
+T_0 ;
+    %vpi_call 2 16 "$dumpfile", "parity_gen.vcd" {0 0 0};
+    %vpi_call 2 17 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x6322b1a0ff30 {0 0 0};
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x6322b1a225b0_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v0x6322b1a225b0_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 170, 0, 8;
+    %store/vec4 v0x6322b1a225b0_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 255, 0, 8;
+    %store/vec4 v0x6322b1a225b0_0, 0, 8;
+    %delay 10, 0;
+    %vpi_call 2 24 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x6322b1a0ff30;
+T_1 ;
+    %vpi_call 2 29 "$monitor", "time=%0t data=%b even=%b odd=%b", $time, v0x6322b1a225b0_0, v0x6322b1a22670_0, v0x6322b1a22740_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_parity_generator.v";
+    "parity_generator.v";
