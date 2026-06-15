@@ -1,0 +1,41 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Mon Jun 15 00:10:13 2026
+[*]
+[dumpfile] "/home/vlsi_dev_box/Documents/NIELIT_ASSIGNMENTS/EXP_NO_44/alu.vcd"
+[dumpfile_mtime] "Sun Jun 14 23:58:56 2026"
+[dumpfile_size] 1236
+[savefile] "/home/vlsi_dev_box/Documents/NIELIT_ASSIGNMENTS/EXP_NO_44/gtkwave.gtkw"
+[timestart] 0
+[size] 1321 704
+[pos] -51 -1
+*-5.982025 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 233
+[signals_width] 118
+[sst_expanded] 1
+[sst_vpaned_height] 180
+@28
+tb.clk
+@800028
+tb.opcode[2:0]
+@28
+(0)tb.opcode[2:0]
+(1)tb.opcode[2:0]
+(2)tb.opcode[2:0]
+@1001200
+-group_end
+@800023
+tb.out[7:0]
+@29
+(0)tb.out[7:0]
+(1)tb.out[7:0]
+(2)tb.out[7:0]
+(3)tb.out[7:0]
+(4)tb.out[7:0]
+(5)tb.out[7:0]
+(6)tb.out[7:0]
+(7)tb.out[7:0]
+@1001201
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0

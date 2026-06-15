@@ -1,14 +1,15 @@
 module ALU (
 input [2:0] opcode ,
-output [7:0] out );
+input clk ,
+output reg [7:0] out );
 
-wire clk ;
-SB_HFOSC osc_int(
-       .CLKHFPU(1'b1),
-      .CLKHFEN(1'b1),
-       .CLKHF(clk)
-    );
-   defparam osc_int.CLKHF_DIV = "0b10"; //12MHZ
+//wire clk ;
+//SB_HFOSC osc_int(
+ //      .CLKHFPU(1'b1),
+ //     .CLKHFEN(1'b1),
+  //     .CLKHF(clk)
+  //  );
+ //  defparam osc_int.CLKHF_DIV = "0b10"; //12MHZ
    
    reg [7:0] a = 8'b10101010 ;
    reg [7:0] b = 8'b11110000 ;
