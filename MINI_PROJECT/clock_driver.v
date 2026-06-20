@@ -1,7 +1,7 @@
 module clock_driver (
 input rst ,
 output clock_div );
-
+/*
 SB_HFOSC CLK1(
     .CLKHFPU(1'b1),
     .CLKHFEN(1'b1),

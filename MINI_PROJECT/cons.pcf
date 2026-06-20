@@ -1,2 +1,3 @@
-set_io rst 37 
-set_io clock_div 36
+set_io  rst 37  
+set_io  second 36
+set_io   minute 35
