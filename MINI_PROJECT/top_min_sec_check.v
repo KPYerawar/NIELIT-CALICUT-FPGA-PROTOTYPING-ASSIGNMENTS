@@ -1,18 +1,21 @@
 module top_min_sec_check (
 input rst ,
-output reg second ,
-output reg minute );
+output reg [5:0]second ,
+output  [1:0] minute2 );
 
 clock_driver d1 (
-.rst(rst),.clock_div (second ),.clk(clk ));
+.rst(rst),.clock_div (divider ),.clk(clk ));
 
 second_counter c1 (
-.rst(rst),.clock_div(second),.min_trig(minute));
+.rst(rst),.second(second),.clock_div(divider));
 
+wire divider ;
 
+minute_counter m1 (
+.rst(rst),.second (second),.minute(minute),.divider(divider));
 
-
-
+assign minute2 = minute[1:0];
+reg [5:0] minute ;
 
 
 wire clk ;

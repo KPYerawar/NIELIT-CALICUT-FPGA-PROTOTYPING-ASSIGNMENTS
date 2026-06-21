@@ -1,3 +1,10 @@
 set_io  rst 37  
-set_io  second 36
-set_io   minute 35
+set_io  second[0] 36
+set_io  second[1] 35
+set_io  second[2] 34
+set_io  second[3] 32
+set_io  second[4] 31
+set_io  second[5] 28
+set_io  minute2[0] 26
+set_io  minute2[1] 25
+
