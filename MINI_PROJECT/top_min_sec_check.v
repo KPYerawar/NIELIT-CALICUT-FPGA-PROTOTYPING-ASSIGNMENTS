@@ -1,7 +1,8 @@
 module top_min_sec_check (
 input rst ,
 output reg [5:0]second ,
-output  [1:0] minute2 );
+output  [5:0] minute,
+output [4:0] hours  );
 
 clock_driver d1 (
 .rst(rst),.clock_div (divider ),.clk(clk ));
@@ -14,9 +15,10 @@ wire divider ;
 minute_counter m1 (
 .rst(rst),.second (second),.minute(minute),.divider(divider));
 
-assign minute2 = minute[1:0];
+
 reg [5:0] minute ;
 
+hour h1 (.rst(rst),.minute(minute),.driver(driver),.hours(hours));
 
 wire clk ;
 SB_HFOSC CLK1(
